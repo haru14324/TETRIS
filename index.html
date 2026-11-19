@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Tetris</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="game-container">
+
+    <header class="header">
+      <div class="logo">NEON<span>TETRIS</span></div>
+      <p>THE CLASSIC BLOCK PUZZLE</p>
+    </header>
+
+    <section class="game-layout">
+
+      <div class="side-panel left-panel">
+        <div class="stat-card">
+          <span class="stat-label">SCORE</span>
+          <strong id="score">0</strong>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-label">LEVEL</span>
+          <strong id="level">1</strong>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-label">LINES</span>
+          <strong id="lines">0</strong>
+        </div>
+
+        <div class="preview-card">
+          <span class="stat-label">NEXT PIECE</span>
+          <canvas id="next" width="120" height="120"></canvas>
+        </div>
+
+        <button id="pauseBtn" class="action-btn">
+          PAUSE
+        </button>
+
+        <button id="restartBtn" class="action-btn secondary">
+          RESTART
+        </button>
+      </div>
+
+      <div class="board-wrapper">
+        <canvas id="tetris" width="300" height="600"></canvas>
+
+        <div id="overlay" class="overlay">
+          <h2 id="overlayTitle">READY?</h2>
+          <p id="overlayText">Let's play Tetris!</p>
+          <button id="startBtn" class="start-btn">
+            START GAME
+          </button>
+        </div>
+      </div>
+
+      <div class="side-panel right-panel">
+        <div class="controls-card">
+          <span class="stat-label">CONTROLS</span>
+
+          <p><kbd>←</kbd> <kbd>→</kbd> Move</p>
+          <p><kbd>↑</kbd> Rotate</p>
+          <p><kbd>↓</kbd> Soft Drop</p>
+          <p><kbd>SPACE</kbd> Hard Drop</p>
+          <p><kbd>P</kbd> Pause</p>
+          <p><kbd>R</kbd> Restart</p>
+        </div>
+
+        <div class="tip-card">
+          <span class="stat-label">TIP</span>
+          <p>Clear multiple lines at once to earn more points!</p>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="mobile-controls">
+      <button data-action="left">◀</button>
+      <button data-action="rotate">↻</button>
+      <button data-action="right">▶</button>
+      <button data-action="down">▼</button>
+      <button data-action="drop">DROP</button>
+    </section>
+
+    <footer>
+      <p>NEON TETRIS © 2026</p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
